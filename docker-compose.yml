@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cratedb:
+    image: benyoo/cratedb:2.1.8
+    container_name: cratedb
+    restart: always
+    privileged: true
+    network_mode: "host"
+    environment:
+    - CRATE_HEAP_SIZE=8G
+    volumes:
+    - /data/CrateDB/config/crate.yml:/data/CrateDB/config/crate.yml
+    - /data/CrateDB/data:/data/CrateDB/data
+    - /data/CrateDB/logs:/data/CrateDB/logs
+    - /data/CrateDB/backup:/data/CrateDB/backup
