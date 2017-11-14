@@ -1,0 +1,33 @@
+# Crate Configuration
+
+stats.enabled: true
+path.conf: /data/CrateDB/config
+path.data: /data/CrateDB/data
+path.logs: /data/CrateDB/logs
+blobs.path: /data/CrateDB/blobs
+#path.plugins: /data/CrateDB/plugins
+
+cluster.name: dwhd_org_custer
+node.name: crate_node_1
+
+#network.host: _site_
+network.bind_host: 0.0.0.0
+#设置具体绑定地址(IPv4或IPv6)
+
+#network.publish_host: 172.25.9.14
+##设置其他节点将用于与此节点通信的地址。 如果未设置，则会自动导出。 它必须指向一个实际的IP地址。
+
+#network.host: 172.25.9.14
+##设置bind_host和publish_host两者
+
+#gateway.recover_after_nodes: 2
+##值要大于discovery.zen.minimum_master_nodes且小于等于gateway.expected_nodes
+
+#gateway.expected_nodes: 3
+##值要等于集群总节点数
+
+#discovery.zen.minimum_master_nodes: 2
+##值最小设置为 (集群总节点数/2)+1
+
+#discovery.zen.ping.unicast.hosts: ["172.25.9.14:4300", "172.25.9.15:4300", "172.25.9.16:4300"]
+##定义集群中所有的节点
